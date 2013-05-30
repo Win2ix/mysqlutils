@@ -1,0 +1,15 @@
+This script can be used to perform full mysql backups. These backups can be optionally encrypted via GPG.
+
+In order to use mysqlbackuputil, please create a .SERVERNAME.cnf file per the script documentation.
+
+Also, please modify the script variables to change the target email address, and the target host and folder
+dir variables.
+
+In order to run this script from the cron - please use the following syntax -
+
+mysqlbackuputil.sh SERVERNAME.com no "exclude db's seperated by space" /srv/savings ""
+
+Params are: 1 - target servername; 2 - encrypt|no encrypt; 3 - "database db exclusions seperated by space"; 4 - Target directory to backup to
+5 - "specific inclusions of databases if required", best left blank to backup all databases
+
+Auth: Sujay D'Souza / sadsouza@win2ix.ca / Win2ix Systems Inc. / Ottawa
